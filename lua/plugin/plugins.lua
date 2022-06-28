@@ -17,5 +17,12 @@ return require('packer').startup(function()
   --theme
   use 'folke/tokyonight.nvim'
     -- netrw enhancement
-    use 'tpope/vim-vinegar'
+  use 'tpope/vim-vinegar'
+    -- qf enhancement
+  use {
+      'ten3roberts/qf.nvim',
+        config = function()
+         require'qf'.setup{}
+  end
+  }
 end)

@@ -14,8 +14,8 @@ local options = {
 	showmode = true,
 	-- display command
 	showcmd = true,
-	-- show status line
-	laststatus = 2,
+	-- show status line but only on the bottom once and not for each instance
+	laststatus = 3,
 
 	--use terminal gui colors
 	termguicolors = true,
@@ -46,6 +46,7 @@ end
 --map("n", "-", ":sp<CR>:E<CR>", { silent = true })
 --display cursorline
 vim.o.cursorline = true
+
 
 vim.cmd "colorscheme tokyonight"
 vim.cmd "filetype plugin on"

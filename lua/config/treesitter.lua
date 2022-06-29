@@ -22,8 +22,10 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = {
-    enable = false
+    enable = true,
+    -- list of language that will be disabled
+    disable = {'yaml'},
   }
 }
-vim.opt.foldmethod='expr'
-vim.opt.foldexpr='nvim_treesitter#foldexpr()'
+-- vim.opt.foldmethod='expr'
+-- vim.opt.foldexpr='nvim_treesitter#foldexpr()'

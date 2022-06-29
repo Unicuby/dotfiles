@@ -48,7 +48,6 @@ end
 vim.o.cursorline = true
 
 
-vim.cmd "colorscheme tokyonight"
-vim.cmd "filetype plugin on"
-vim.cmd "filetype plugin indent on"
+-- vim.cmd "filetype plugin on"
+-- vim.cmd "filetype plugin indent on"
 vim.cmd "set list listchars=tab:»·,trail:·,eol:↩"

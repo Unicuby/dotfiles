@@ -19,11 +19,9 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'
     -- status line enhancement
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-
+        'feline-nvim/feline.nvim',
         config = function()
-            require'lualine'.setup()
+            require('feline').setup()
         end
     }
     -- netrw enhancement

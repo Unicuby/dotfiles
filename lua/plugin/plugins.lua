@@ -19,9 +19,10 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'
     -- status line enhancement
     use {
-        'feline-nvim/feline.nvim',
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = function()
-            require('feline').setup()
+            require'lualine'.setup()
         end
     }
     -- netrw enhancement
@@ -30,6 +31,8 @@ return require('packer').startup(function()
     use 'tpope/vim-commentary'
     -- simplified sorrounding
     use 'tpope/vim-surround'
+    -- Formater
+use "mhartington/formatter.nvim"
     -- qf enhancement
     use {
         'ten3roberts/qf.nvim',

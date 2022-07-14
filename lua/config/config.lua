@@ -1,5 +1,5 @@
 local options = {
---	filetype = true, 
+--	filetype = true,
 	-- convert tab to space
 	expandtab = true,
 	tabstop = 4,
@@ -42,12 +42,9 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
---opent netrw when - is pressed
---map("n", "-", ":sp<CR>:E<CR>", { silent = true })
 --display cursorline
 vim.o.cursorline = true
-
-
--- vim.cmd "filetype plugin on"
--- vim.cmd "filetype plugin indent on"
 vim.cmd "set list listchars=tab:»·,trail:·,eol:↩"
+
+-- remove auto comment when o is pressed
+vim.cmd"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
